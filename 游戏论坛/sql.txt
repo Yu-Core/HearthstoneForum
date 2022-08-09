@@ -1,0 +1,142 @@
+use Game
+create table tb_Admin
+(
+   aId int primary key identity,
+   aName nvarchar(20) ,
+   aPassword varchar(20)£¬
+   aUsername nvarchar(50),
+   aData datetime
+)
+
+create table tb_User
+(
+   uId int primary key identity,
+   uUsername nvarchar(20),
+   uPassword varchar(20),
+   uSex nvarchar(2),
+   uEmail varchar(20),
+   uHeadId int ,
+   uQQ int,
+   uName nvarchar(20),
+   uPhone varchar(20)
+)
+
+
+create table tb_Rollimage
+(
+   Id int primary key identity,
+   Imagefile varchar(50)
+)
+
+create table tb_Head
+(
+   Id int primary key identity,
+   Imagefile varchar(50)
+)
+
+
+create table tb_Revert
+(
+   Id int primary key identity ,
+   Motifid int ,
+   RevertUser int ,
+   Datatime datetime,
+   Matter text
+)
+
+
+create table tb_motif
+(
+   Id int primary key identity,
+   Appearuser int,
+   Areaid int,
+   mName nvarchar(50),
+   mContent text,
+   Datatime datetime,
+   Degree int ,
+   Ifadmin int
+)
+
+create table tb_Area
+(
+  Id int primary key identity,
+  areaName nvarchar (50),
+  Datatime datetime
+)
+
+creat table tb_Download
+(
+	Id int primary key identity,
+	Download varchar(50),
+	Imagefile varchar(50)
+)
+ create table tb_Newstu
+(
+  Id int primary key identity,
+  Title nvarchar(20),
+  nContent text,
+  Imagefile varchar(50)
+)
+create table tb_Carousel
+(
+  Id int primary key identity,
+  Title nvarchar(20),
+  Imagefile varchar(50)
+)
+create table tb_Notice
+(
+  Id int primary key identity,
+  Title nvarchar(20),
+  Content text,
+  Datatime datetime,
+)
+create table tb_Sign
+(
+  Id int primary key identity,
+  uId int,
+  days int,
+  last_sig datetime,
+)
+create table tb_Likes
+(
+	Id int primary key identity,
+	uId int,
+	mId int,
+	Datatime datetime,
+)
+create table tb_Comment
+(
+	Id int primary key identity,
+	uId int,
+	mId int,
+	Matter text,
+	Datatime datetime,
+)
+create table tb_Collection
+(
+	Id int primary key identity,
+	uId int,
+	mId int,
+	Datatime datetime,
+)
+create table tb_History
+(
+	Id int primary key identity,
+	uId int,
+	mId int,
+	Datatime datetime,
+)
+create table tb_Report
+(
+	Id int primary key identity,
+	uId int,
+	mId int,
+	Datatime datetime,
+)
+create table tb_ForbiddenSpeech
+(
+	Id int primary key identity,
+	uId int,
+	howlong int,
+	Datatime datetime,
+)

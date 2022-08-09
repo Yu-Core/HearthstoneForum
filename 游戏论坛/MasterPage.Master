@@ -1,0 +1,223 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="游戏论坛.MasterPage" %>
+
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link href="Css/StyleSheet1.css" rel="stylesheet" />
+    <link href="Css/StyleSheet2.css" rel="stylesheet" />
+    <link href="Css/sweetalert2.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.7.2.min.js"></script>
+    <script src="scripts/sweetalert2.min.js"></script>
+    <script src="scripts/es6-promise.auto.js"></script>
+    
+    <title>炉石传说游戏论坛</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+
+        html{
+            
+        }
+        body 
+        {
+            /*width:1519.2px;*/
+            width:100%;
+	        font-family: "Microsoft YaHei";
+	        color: #000;
+	        font-size:12px;
+	        margin:0px 0px 0px 0px;
+            overflow-x: hidden;
+            background:url(/images/bodybg.jpg)transparent repeat center top;
+        }
+        .new{         
+             background-position:center center;         
+             width:100%;         
+             margin:0px 0px 0px 0px;
+        }
+        .new2{
+            background:url(/images/module_line.jpg) no-repeat;
+            width:100%;
+            height:21px;
+        }
+    
+        .auto-style1 {
+            width: 200px;
+            height: 60px;
+            text-align: center;
+            box-sizing: border-box;
+            position: relative;
+            left: 401px;
+        }
+        .lbtn{
+            width:100%;
+            height:100%;
+            box-sizing:border-box;
+            padding-top:19px;
+        }
+        @keyframes mymove
+        {
+            from {top:35px;}
+            to {top:50px;}
+        }
+    
+    </style>
+</head>
+<body>  
+    <form id="form1" runat="server" style="width:100%" >
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div style="width:100%;position:relative;margin:0 auto;z-index:2;" >
+            <div   style="width:100%;height:70px;position:absolute;top:20px;text-align:right;vertical-align:middle;display:table-cell;font-size:16px;z-index:1;box-sizing:border-box;padding-right:15%;">
+                <div id="name" style="float:right">
+                    <asp:Image ID="Image3" runat="server" Height="70px" Width="70px" ImageUrl="~/images/logo_hearthstone.png" />
+                    <asp:Label ID="Label8" runat="server" Text="欢迎您，请" ></asp:Label>
+                    <asp:LinkButton ID="Login" runat="server" ForeColor="Red" OnClick="LinkButton5_Click" >登录</asp:LinkButton>
+                    <asp:Label ID="Label9" runat="server" Text="或" ></asp:Label>
+                    <asp:LinkButton ID="Register" runat="server" ForeColor="Red" OnClick="Register_Click" >注册</asp:LinkButton>
+                    <div id="mhcontent"  style="width:150px;height:auto;position:absolute;animation:mymove 0.2s 1 linear;top:50px;right:230px;z-index:999;text-align:center;font-size:16px;font-family:Tahoma,'Microsoft Yahei','Simsun';">
+                        <div style="height:40px;">
+
+                        </div>
+                        <div style="border-radius:5px;background-color:rgba(0,0,0,0.5);">
+                            <div style="width:auto;height:40px;box-sizing:border-box;padding-top:12px">
+                                <asp:LinkButton ID="PersonalCenter" runat="server" Text="个人中心" Font-Underline="False" ForeColor="White" OnClick="PersonalCenter_Click"></asp:LinkButton>
+                            </div>
+                            <div style="width:auto;height:40px;box-sizing:border-box;padding-top:12px">
+                                <asp:LinkButton ID="LotteryDraw" runat="server" Font-Underline="False" ForeColor="White" OnClick="LotteryDraw_Click">每日抽奖</asp:LinkButton>
+                            </div>
+                            <div style="width:auto;height:50px;box-sizing:border-box;padding-top:12px;">
+                                <asp:LinkButton ID="Logout" runat="server" Font-Underline="False" ForeColor="White" OnClick="Logout_Click">退出登录</asp:LinkButton>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <table border="0"   style="height:318px;width:100%;border-collapse:collapse; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:keep-all;position:relative;">
+                 <tr>
+                    <td style="background:url(/images/topbg.jpg) center center no-repeat; height: 300px">
+                        <div id="fp" style="position:relative;top:10%;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="navigation"  style="position:relative;background:url(/images/bodybg.jpg) center center no-repeat;width:1536px;height:50px;text-align:center;position:relative;bottom:10px;">
+                        <div id="navigation2"  style="width:100%;margin:auto auto;position:relative;top:0;z-index:99">
+                            <table id="navigation3" style="font-family: STXingkai;font-size:25px; margin:auto;width:1000px;position:relative;background-color:rgba(0,0,0,0.3);border:3px solid #c4bdbd;box-sizing:border-box;">
+                                <tr>
+                                    <td class="style1" >
+                                        <asp:LinkButton ID="LinkButton1" runat="server"  CssClass="lbtn"
+                                            Font-Underline="False"  OnClick="LinkButton1_Click"  Width="100%">论坛首页</asp:LinkButton>
+                                        
+                                    </td>
+                                    
+                                    <td class="style1">
+                                        <asp:LinkButton ID="LinkButton7" runat="server" CssClass="lbtn"
+                                            Font-Underline="False"  OnClick="LinkButton7_Click" Width="100%">论坛公告</asp:LinkButton>
+                                    </td>
+                                    <td class="style1">
+                                         <asp:LinkButton ID="LinkButton3" runat="server" CssClass="lbtn"
+                                             Font-Underline="False"  OnClick="LinkButton3_Click" Width="100%">游戏排名</asp:LinkButton>
+                                    </td>
+                                    
+                                    <td class="style1">
+                                        <asp:LinkButton ID="LinkButton4" runat="server" CssClass="lbtn"
+                                            Font-Underline="False"  OnClick="LinkButton4_Click" Width="100%">游戏下载</asp:LinkButton>
+                                    </td>
+                                    <td class="style1">
+                                        <asp:LinkButton ID="LinkButton2" runat="server" CssClass="lbtn"
+                                            Font-Underline="False"  OnClick="LinkButton2_Click" Width="100%">新手指南</asp:LinkButton>
+                                    </td>
+                                   <%-- <td class="style1">
+                                         <asp:LinkButton ID="LinkButton5" runat="server" CssClass="lbtn"
+                                             Font-Underline="False"  OnClick="LinkButton5_Click"  Width="100%">用户登录</asp:LinkButton>
+                                    </td>--%>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="width:100%;height:auto;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div id="bottom" runat="server" style="height:583px;width:100%;overflow:auto; background:url(/images/bottombg.jpg) center center no-repeat;position:relative;text-align:center;margin:0 auto;">
+            <div style="margin:0 auto;width:914px;position:relative;top:30%;">
+                <table  style="height:210px;width:auto;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;word-break:keep-all;">
+                    <tr>
+                        <td  style="height:auto;width:auto">
+                            <asp:Image ID="Image1" runat="server"  ImageUrl="~/images/logo_blizzard.png" Width="150px" Height="80px" ImageAlign="Middle" />  
+                            <asp:Image ID="Image2" runat="server"  style="margin:0 0 0 25px" ImageUrl="~/images/logo_ne.png" Width="150px" Height="50px" ImageAlign="Middle" />
+                        </td>
+                        <td style="width:auto; height:161px;text-align:left;box-sizing:border-box;padding-left:20px">
+                            <br />
+                            <%--<asp:Label ID="Label3" runat="server" Text="©2021 烈火娱乐有限公司版权所有 由上海网之难网络科技发展有限公司运营 著作权侵权" Font-Size="12px" ForeColor="#502C09" Height="12px"></asp:Label><br /><br />
+                            <asp:Label ID="Label4" runat="server" Text="文网进字[2021]001号 沪网文〔2021〕1234-567号  增值电信业务经营许可证编号：沪B2－20210001 " Font-Size="12px" ForeColor="#502C09"></asp:Label><br /><br />
+                            <asp:Label ID="Label5" runat="server" Text="沪ICP备：沪B2－20080012  法律文件" Font-Size="12px" ForeColor="#502C09"></asp:Label><br /><br />
+                            <asp:Label ID="Label6" runat="server" Text="新出审字[2013]1510号  文化部网络游戏举报与联系邮箱：wlyxjb@gmail.com  《互联网文化管理暂行规定》" Font-Size="12px" ForeColor="#502C09"></asp:Label><br /><br />
+                            <asp:Label ID="Label7" runat="server" Text="互联网违法和不良信息举报电话：0571-28090163 沪公网安备 31011502022167号" Font-Size="12px" ForeColor="#502C09"></asp:Label><br />--%>
+                            <span style="font-size:12px;color:#502C09">
+                                ©2021 xxxx有限公司版权所有 由xxxxx网络科技发展有限公司运营 著作权侵权<br /><br />
+                                文网进字[2021]001号 沪网文〔2021〕1234-567号  增值电信业务经营许可证编号：沪B2－20210001 <br /><br />
+                                沪ICP备：沪B2－20080012  法律文件<br /><br />
+                                新出审字[2013]1510号  文化部网络游戏举报与联系邮箱：wlyxjb@gmail.com  《互联网文化管理暂行规定》<br /><br />
+                                互联网违法和不良信息举报电话：0571-28090163 沪公网安备 31011502022167号<br />
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align:center;" colspan="2">
+                            <br />
+                            <br />
+                            <asp:Label ID="Label1" runat="server" Font-size="12px" Text="积极健康的游戏心态是健康游戏的开端，本游戏故事情节设置紧凑，请您合理控制游戏时间，避免沉溺游戏影响生活，注意自我保护，防范网络陷阱。" ForeColor="#432914"></asp:Label>
+                            <br />
+                            <asp:Label ID="Label2" runat="server" Font-size="9pt" Text="健康游戏忠告：抵制不良游戏，拒绝盗版游戏。注意自我保护，谨防受骗上当。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。" ForeColor="#432914"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+        <script>
+            function getOffsetTop(obj) {
+                var offsetTop = 0;
+                while (obj != window.document.body && obj != null) {
+                    offsetTop += obj.offsetTop
+                    obj = obj.offsetParent
+                }
+                return offsetTop;
+            }
+
+            window.onscroll = function () {
+                var top = document.getElementById("navigation");
+                var nav = document.getElementById("navigation2");
+                var nav2 = document.getElementById("navigation3");
+                var scrollTops = document.documentElement.scrollTop;
+                if (scrollTops > getOffsetTop(top)) {
+                    nav.style.position = 'fixed';
+                    nav2.style.width = '100%';
+                    nav2.style.backgroundColor = 'rgba(0, 0, 0, 0.65)';
+                }
+                else {
+                    nav.style.position = 'relative';
+                    nav2.style.width = '1000px';
+                    nav2.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+                }
+            }
+            
+            
+        </script>
+    </form>
+</body>
+</html>
+

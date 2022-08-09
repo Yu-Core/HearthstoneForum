@@ -1,0 +1,818 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BFF31797-5151-4F16-8297-C81E8344A769}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>游戏论坛</RootNamespace>
+    <AssemblyName>游戏论坛</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44355</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="ToolGood.Words, Version=3.0.2.4, Culture=neutral, PublicKeyToken=d330f4fd115e6143, processorArchitecture=MSIL">
+      <HintPath>..\packages\ToolGood.Words.3.0.2.4\lib\net40\ToolGood.Words.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin\Add.aspx" />
+    <Content Include="Admin\Admin\Edit.aspx" />
+    <Content Include="Admin\Admin\Index.aspx" />
+    <Content Include="Admin\Area\Add.aspx" />
+    <Content Include="Admin\Area\Edit.aspx" />
+    <Content Include="Admin\Area\Index.aspx" />
+    <Content Include="Admin\assets\css\bui-min.css" />
+    <Content Include="Admin\assets\css\dpl-min.css" />
+    <Content Include="Admin\assets\css\main-min.css" />
+    <Content Include="Admin\assets\css\main.css" />
+    <Content Include="Admin\assets\css\page-min.css" />
+    <Content Include="Admin\assets\css\page.css" />
+    <Content Include="Admin\assets\css\prettify.css" />
+    <Content Include="Admin\assets\img\hide_list.png" />
+    <Content Include="Admin\assets\img\icon1.png" />
+    <Content Include="Admin\assets\img\icon2.png" />
+    <Content Include="Admin\assets\img\left-slib.gif" />
+    <Content Include="Admin\assets\img\main-nav-bg.png" />
+    <Content Include="Admin\assets\img\main-nav-bg1.png" />
+    <Content Include="Admin\assets\img\main-nav-bg2.png" />
+    <Content Include="Admin\assets\img\menu.jpg" />
+    <Content Include="Admin\assets\img\nav.jpg" />
+    <Content Include="Admin\assets\img\nav_selected.png" />
+    <Content Include="Admin\assets\img\resource.jpg" />
+    <Content Include="Admin\assets\img\taobao\T1BHtLFbFdXXaHNz_X-16-16.gif" />
+    <Content Include="Admin\assets\img\taobao\T1GgTxXm4qXXaGyjny-500-188.png" />
+    <Content Include="Admin\assets\img\taobao\T1k1v5XhNdXXb0_tkB-191-450.gif" />
+    <Content Include="Admin\assets\img\taobao\T1kBv5XbRbXXb.nqL4-200-300.gif" />
+    <Content Include="Admin\assets\img\taobao\T1rbpNFaJXXXbylH7R-80-100.gif" />
+    <Content Include="Admin\assets\img\taobao\T1SLHBXaXmXXXF.Nbe-140-120.gif" />
+    <Content Include="Admin\assets\img\taobao\T1YTNJFadfXXX6DYsb-100-100.gif" />
+    <Content Include="Admin\assets\img\top.png" />
+    <Content Include="Admin\assets\js\bui-min.js" />
+    <Content Include="Admin\assets\js\bui.js" />
+    <Content Include="Admin\assets\js\common\build.xml" />
+    <Content Include="Admin\assets\js\common\main-min.js" />
+    <Content Include="Admin\assets\js\common\main.js" />
+    <Content Include="Admin\assets\js\common\page-min.js" />
+    <Content Include="Admin\assets\js\common\page.js" />
+    <Content Include="Admin\assets\js\common\search-min.js" />
+    <Content Include="Admin\assets\js\common\search.js" />
+    <Content Include="Admin\assets\js\config-min.js" />
+    <Content Include="Admin\assets\js\config.js" />
+    <Content Include="Admin\assets\js\editor-min.js" />
+    <Content Include="Admin\assets\js\jquery-1.8.1.min.js" />
+    <Content Include="Admin\assets\js\module\build.xml" />
+    <Content Include="Admin\assets\js\prettify.js" />
+    <Content Include="Admin\assets\js\toolbar-min.js" />
+    <Content Include="Admin\assets\js\tree-min.js" />
+    <Content Include="Admin\Carousel\Add.aspx" />
+    <Content Include="Admin\Carousel\Edit.aspx" />
+    <Content Include="Admin\Carousel\Index.aspx" />
+    <Content Include="Admin\Css\bootstrap-responsive.css" />
+    <Content Include="Admin\Css\bootstrap-responsive.min.css" />
+    <Content Include="Admin\Css\bootstrap.css" />
+    <Content Include="Admin\Css\bootstrap.min.css" />
+    <Content Include="Admin\Css\style.css" />
+    <Content Include="Admin\Download\Add.aspx" />
+    <Content Include="Admin\Download\Edit.aspx" />
+    <Content Include="Admin\Download\Index.aspx" />
+    <Content Include="Admin\front\Css\mobile_web.css" />
+    <Content Include="Admin\front\Image\home4.jpg" />
+    <Content Include="Admin\front\Image\icon-address.png" />
+    <Content Include="Admin\front\Image\icon-author.png" />
+    <Content Include="Admin\Head\Add.aspx" />
+    <Content Include="Admin\Head\Edit.aspx" />
+    <Content Include="Admin\Head\Index.aspx" />
+    <Content Include="Admin\Images\add.gif" />
+    <Content Include="Admin\Images\button.png" />
+    <Content Include="Admin\Images\con_bg.png" />
+    <Content Include="Admin\Images\glyphicons-halflings-white.png" />
+    <Content Include="Admin\Images\glyphicons-halflings.png" />
+    <Content Include="Admin\Images\icon.png" />
+    <Content Include="Admin\Images\icon2.png" />
+    <Content Include="Admin\Images\input.png" />
+    <Content Include="Admin\Images\logo_820.jpg" />
+    <Content Include="Admin\Images\logo_jc.jpg" />
+    <Content Include="Admin\Images\logo_ym.jpg" />
+    <Content Include="Admin\Images\msg_bg.png" />
+    <Content Include="Admin\Images\msg_box.png" />
+    <Content Include="Admin\Images\nav.png" />
+    <Content Include="Admin\Images\nopic.jpg" />
+    <Content Include="Admin\Images\pic1.jpg" />
+    <Content Include="Admin\Images\progressbar_microsoft.gif" />
+    <Content Include="Admin\Images\x_bg.png" />
+    <Content Include="Admin\Images\z2.jpg" />
+    <Content Include="Admin\Images\z3.jpg" />
+    <Content Include="Admin\Images\z4.jpg" />
+    <Content Include="Admin\Index.aspx" />
+    <Content Include="Admin\Js\artDialog\artDialog.js" />
+    <Content Include="Admin\Js\artDialog\artDialog.source.js" />
+    <Content Include="Admin\Js\artDialog\index.html" />
+    <Content Include="Admin\Js\artDialog\jquery.artDialog.js" />
+    <Content Include="Admin\Js\artDialog\jquery.artDialog.source.js" />
+    <Content Include="Admin\Js\artDialog\license.txt" />
+    <Content Include="Admin\Js\artDialog\plugins\iframeTools.js" />
+    <Content Include="Admin\Js\artDialog\plugins\iframeTools.source.js" />
+    <Content Include="Admin\Js\artDialog\skins\aero.css" />
+    <Content Include="Admin\Js\artDialog\skins\aero\aero_s.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\aero_s2.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_close.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_e.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_n.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_ne.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_nw.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_s.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_se.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_sw.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="Admin\Js\artDialog\skins\aero\ie6\aui_w.png" />
+    <Content Include="Admin\Js\artDialog\skins\black.css" />
+    <Content Include="Admin\Js\artDialog\skins\black\bg.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\bg2.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\bg_css3.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\bg_css3_2.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\close.hover.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\close.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\e.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\n.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\ne.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\nw.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\s.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\se.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\sw.png" />
+    <Content Include="Admin\Js\artDialog\skins\black\ie6\w.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue.css" />
+    <Content Include="Admin\Js\artDialog\skins\blue\bg.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\bg2.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\bg_css3.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\bg_css3_2.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\close.hover.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\close.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\e.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\n.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\ne.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\nw.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\s.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\se.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\sw.png" />
+    <Content Include="Admin\Js\artDialog\skins\blue\ie6\w.png" />
+    <Content Include="Admin\Js\artDialog\skins\chrome.css" />
+    <Content Include="Admin\Js\artDialog\skins\chrome\border.png" />
+    <Content Include="Admin\Js\artDialog\skins\chrome\chrome_s.png" />
+    <Content Include="Admin\Js\artDialog\skins\default.css" />
+    <Content Include="Admin\Js\artDialog\skins\green.css" />
+    <Content Include="Admin\Js\artDialog\skins\green\bg.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\bg2.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\bg_css3.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\bg_css3_2.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\color_bg.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\close.hover.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\close.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\e.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\n.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\ne.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\nw.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\s.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\se.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\sw.png" />
+    <Content Include="Admin\Js\artDialog\skins\green\ie6\w.png" />
+    <Content Include="Admin\Js\artDialog\skins\icons\error.png" />
+    <Content Include="Admin\Js\artDialog\skins\icons\face-sad.png" />
+    <Content Include="Admin\Js\artDialog\skins\icons\face-smile.png" />
+    <Content Include="Admin\Js\artDialog\skins\icons\loading.gif" />
+    <Content Include="Admin\Js\artDialog\skins\icons\question.png" />
+    <Content Include="Admin\Js\artDialog\skins\icons\succeed.png" />
+    <Content Include="Admin\Js\artDialog\skins\icons\warning.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog.css" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="Admin\Js\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera.css" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\s1.png" />
+    <Content Include="Admin\Js\artDialog\skins\opera\s2.png" />
+    <Content Include="Admin\Js\artDialog\skins\simple.css" />
+    <Content Include="Admin\Js\artDialog\skins\twitter.css" />
+    <Content Include="Admin\Js\bootstrap.file-input.js" />
+    <Content Include="Admin\Js\bootstrap.js" />
+    <Content Include="Admin\Js\bootstrap.min.js" />
+    <Content Include="Admin\Js\ckform.js" />
+    <Content Include="Admin\Js\common.js" />
+    <Content Include="Admin\Js\formValidator.js" />
+    <Content Include="Admin\Js\formValidatorRegex.js" />
+    <Content Include="Admin\Js\jquery.js" />
+    <Content Include="Admin\Js\jquery.sorted.js" />
+    <Content Include="Admin\Motif\Comment.aspx" />
+    <Content Include="Admin\Motif\Edit.aspx" />
+    <Content Include="Admin\Motif\Index.aspx" />
+    <Content Include="Admin\Newstu\Add.aspx" />
+    <Content Include="Admin\Newstu\Edit.aspx" />
+    <Content Include="Admin\Newstu\Index.aspx" />
+    <Content Include="Admin\Notice\Add.aspx" />
+    <Content Include="Admin\Notice\Edit.aspx" />
+    <Content Include="Admin\Notice\Index.aspx" />
+    <Content Include="Admin\Report\Edit.aspx" />
+    <Content Include="Admin\Report\Index.aspx" />
+    <Content Include="Admin\User\Add.aspx" />
+    <Content Include="Admin\User\Edit.aspx" />
+    <Content Include="Admin\User\Index.aspx" />
+    <Content Include="AllNotice.aspx" />
+    <Content Include="BadWord.txt" />
+    <Content Include="Css\sweetalert2.css" />
+    <Content Include="Css\sweetalert2.min.css" />
+    <Content Include="Download\HearthStone_IOS.aspx" />
+    <Content Include="App_Data\Game.mdf" />
+    <Content Include="App_Data\Game_log.ldf">
+      <DependentUpon>Game.mdf</DependentUpon>
+    </Content>
+    <Content Include="Css\StyleSheet2.css" />
+    <Content Include="Css\StyleSheet3.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Download.aspx" />
+    <Content Include="Download\download_ios.png" />
+    <Content Include="Download\download_mac.png" />
+    <Content Include="Download\download_pc.png" />
+    <Content Include="Download\HearthStone_PC.exe" />
+    <Content Include="Download\download_android.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="HeadImage\Anduin%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Anduin.jpg" />
+    <Content Include="HeadImage\Garrosh%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Garrosh.jpg" />
+    <Content Include="HeadImage\Gul’dan%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Gul’dan.jpg" />
+    <Content Include="HeadImage\Illidan.jpg" />
+    <Content Include="HeadImage\Illidan2.jpg" />
+    <Content Include="HeadImage\Jaina%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Jaina.jpg" />
+    <Content Include="HeadImage\Malfurion%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Malfurion.jpg" />
+    <Content Include="HeadImage\Rexxar%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Rexxar.jpg" />
+    <Content Include="HeadImage\Thrall%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Thrall.jpg" />
+    <Content Include="HeadImage\Uther%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Uther.jpg" />
+    <Content Include="HeadImage\Valeera%281000Wins%29.jpg" />
+    <Content Include="HeadImage\Valeera.jpg" />
+    <Content Include="HearthStoneHistory.aspx" />
+    <Content Include="images\Admin.png" />
+    <Content Include="images\AppleStore.jpeg" />
+    <Content Include="images\bg_li.png" />
+    <Content Include="images\bodybg.jpg" />
+    <Content Include="images\books.png" />
+    <Content Include="images\bottombg.jpg" />
+    <Content Include="images\Carouselmap\1.jpg" />
+    <Content Include="images\Carouselmap\2.jpg" />
+    <Content Include="images\Carouselmap\3.jpg" />
+    <Content Include="images\col-rank.png" />
+    <Content Include="images\collected.png" />
+    <Content Include="images\collection.png" />
+    <Content Include="images\comment.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\liked.png" />
+    <Content Include="images\likes.png" />
+    <Content Include="images\logo_blizzard.png" />
+    <Content Include="images\logo_hearthstone.png" />
+    <Content Include="images\logo_ne.png" />
+    <Content Include="images\lushichuanshuo.png" />
+    <Content Include="images\module_line.jpg" />
+    <Content Include="images\more.png" />
+    <Content Include="images\NewPlayerGuide\0.jpg" />
+    <Content Include="images\NewPlayerGuide\1.jpg" />
+    <Content Include="images\NewPlayerGuide\2.jpg" />
+    <Content Include="images\NewPlayerGuide\3.jpg" />
+    <Content Include="images\NewPlayerGuide\4.jpg" />
+    <Content Include="images\NewPlayerGuide\5.jpg" />
+    <Content Include="images\NewPlayerGuide\6.jpg" />
+    <Content Include="images\NewPlayerGuide\7.png" />
+    <Content Include="images\NewPlayerGuide\8.jpg" />
+    <Content Include="images\parchment2.png" />
+    <Content Include="images\signin.png" />
+    <Content Include="images\sou.png" />
+    <Content Include="images\topbg.jpg" />
+    <Content Include="images\User.png" />
+    <Content Include="images\NavigationButton.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="LotteryDraw.aspx" />
+    <Content Include="Messagetext.ascx" />
+    <Content Include="Module.aspx" />
+    <Content Include="Module_info.aspx" />
+    <Content Include="Music\Armada.mp3" />
+    <Content Include="Music\download-complete.wav" />
+    <Content Include="Music\invincible.mp3" />
+    <Content Include="NewPlayerGuide.aspx" />
+    <Content Include="Notice.aspx" />
+    <Content Include="PersonalCenter.aspx" />
+    <Content Include="RankingList.aspx" />
+    <Content Include="Register.aspx" />
+    <Content Include="Register_info.aspx" />
+    <Content Include="scripts\es6-promise.auto.js" />
+    <Content Include="scripts\ScrollHolder.js" />
+    <Content Include="scripts\jquery-1.7.2.js" />
+    <Content Include="scripts\jquery-1.7.2.min.js" />
+    <Content Include="scripts\sweetalert2.min.js" />
+    <Content Include="sql.txt" />
+    <Content Include="Css\StyleSheet1.css" />
+    <Content Include="Video\Illidan.mp4" />
+    <Content Include="Video\LichKing.mp4" />
+    <Content Include="Web.config" />
+    <Content Include="Test.aspx" />
+    <Content Include="WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Area\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Area\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Area\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Area\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Area\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Area\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Carousel\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Carousel\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Carousel\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Carousel\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Carousel\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Carousel\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Download\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Download\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Download\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Download\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Download\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Download\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Head\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Head\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Head\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Head\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Head\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Head\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Motif\Comment.aspx.cs">
+      <DependentUpon>Comment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Motif\Comment.aspx.designer.cs">
+      <DependentUpon>Comment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Motif\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Motif\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Motif\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Motif\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Newstu\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Newstu\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Newstu\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Newstu\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Newstu\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Newstu\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Notice\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Notice\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Notice\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Notice\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Notice\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Notice\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Report\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Report\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Report\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Report\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\User\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\User\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllNotice.aspx.cs">
+      <DependentUpon>AllNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllNotice.aspx.designer.cs">
+      <DependentUpon>AllNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Download\HearthStone_IOS.aspx.cs">
+      <DependentUpon>HearthStone_IOS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Download\HearthStone_IOS.aspx.designer.cs">
+      <DependentUpon>HearthStone_IOS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\DBconnection.cs" />
+    <Compile Include="CountryDate.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Download.aspx.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Download.aspx.designer.cs">
+      <DependentUpon>Download.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HearthStoneHistory.aspx.cs">
+      <DependentUpon>HearthStoneHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HearthStoneHistory.aspx.designer.cs">
+      <DependentUpon>HearthStoneHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LotteryDraw.aspx.cs">
+      <DependentUpon>LotteryDraw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LotteryDraw.aspx.designer.cs">
+      <DependentUpon>LotteryDraw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Messagetext.ascx.cs">
+      <DependentUpon>Messagetext.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Messagetext.ascx.designer.cs">
+      <DependentUpon>Messagetext.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module.aspx.cs">
+      <DependentUpon>Module.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module.aspx.designer.cs">
+      <DependentUpon>Module.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module_info.aspx.cs">
+      <DependentUpon>Module_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module_info.aspx.designer.cs">
+      <DependentUpon>Module_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewPlayerGuide.aspx.cs">
+      <DependentUpon>NewPlayerGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPlayerGuide.aspx.designer.cs">
+      <DependentUpon>NewPlayerGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoHTMLBase.cs" />
+    <Compile Include="Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PersonalCenter.aspx.cs">
+      <DependentUpon>PersonalCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PersonalCenter.aspx.designer.cs">
+      <DependentUpon>PersonalCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RankingList.aspx.cs">
+      <DependentUpon>RankingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RankingList.aspx.designer.cs">
+      <DependentUpon>RankingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Register_info.aspx.cs">
+      <DependentUpon>Register_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register_info.aspx.designer.cs">
+      <DependentUpon>Register_info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendMail.ashx.cs">
+      <DependentUpon>SendMail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.Master" />
+    <Content Include="Download\HearthStone_Android.apk" />
+    <Content Include="Download\HearthStone_Mac.zip" />
+    <None Include="packages.config" />
+    <Content Include="SendMail.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PlayerImages\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51872</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44355/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,332 @@
+﻿    .register {
+    border: 0px;
+    height: 30px;
+    width: 578px;
+    text-align: left;
+    font-size: 17px;
+    font-family:Arial;
+    }
+    .register_info {
+    border: 0px;
+    height: 35px;
+    width: 200px;
+    text-align: center; 
+    }
+.register_info2 {
+    border: 0px;
+    height: 35px;
+    width: 200px;
+    font-size: 20px;
+    font-family: KaiTi;
+    text-align: left;
+}
+    .register_info3 {
+    width: 200px;
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    color: transparent;
+    }
+.register_info_TB {
+    Height:25px;
+    Width:253px;
+    font-style:italic;
+    font-weight:700;
+    Font-Size:15px;
+    outline:none;
+    border:none;
+    border-radius:3px;
+}
+
+    .Login {
+    height: 40px;
+    text-align: left;
+    }
+    .round_icon {
+    width: 135px;
+    height: 135px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 1;
+    user-select: none;
+    }
+    .luackcharm {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    z-index: 2;
+    user-select: none;
+    }
+    
+    .ddlboder {
+    border: solid black;
+    border-width: 0 0 3px 0;
+    outline: none;
+    }
+    .lblboder {
+    border: solid black;
+    border-width: 0 0 3px 0;
+    outline:none;
+    }
+    a:hover {
+    color:red;
+    }
+    .blackcolor {
+    color:#777777;
+    }    
+    .btnoutline{
+    outline:none;
+    }
+    #name * {
+    vertical-align:middle;
+    }
+    #mhcontent {
+    display: none
+    }
+
+    .apple_btn_bg {
+    background: url(/Download/download_ios.png) no-repeat center center;
+    border: none;
+    outline: none;
+    }
+    .textstroke {
+    text-shadow: #000 1px 0 0,#000 0 1px 0,#000 -1px 0 0,#000 0 -1px 0;
+    filter: Glow(color=#000, strength=1);
+    }
+.style1 {
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+    /*.style1 a {
+        width:200px;
+        height:55px;
+        display:table-cell;
+        vertical-align:middle;
+    }*/
+    .outline{
+    outline:none;
+    }
+    .pc_TB{
+    outline:none;
+    border:none;
+    background-color:transparent;
+    margin-left:10px;
+    }
+    .pc_li {
+    list-style: none;
+    width: 100px;
+    height:100px;
+    margin: 0 25px;
+    vertical-align: middle;
+    display: flex;
+    cursor: pointer;
+    float:left;
+    box-sizing:border-box;
+    font-size:16px;
+    text-align:center;
+    }
+    .pc_cancel #ContentPlaceHolder1_Button7:hover {
+    background-color: #fff5f2;
+    }
+    .pc_preservation #ContentPlaceHolder1_Button2:hover {
+    background-color: #fc1944;
+    }
+    .pc_preservation #ContentPlaceHolder1_Button2 {
+    background-color: red;
+    }
+    .pc_cancel #ContentPlaceHolder1_Button7 {
+    background-color: white;
+    }
+    .pc_btn {
+        padding-bottom: 20px;
+        outline: none;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    video {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    /*加滤镜*/
+    /*filter: blur(15px); //背景模糊设置 */
+    /*-webkit-filter: grayscale(100%);*/
+    /*filter:grayscale(100%); //背景灰度设置*/
+    z-index: -11
+    }
+
+    source {
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    }
+
+    #login:hover{
+    background-color: #00aeff;
+    border-color: #00aeff;
+    }
+    #login {
+    background-color: #0E86CA;
+    border: 1px solid #00aeff;
+    outline: none;
+    }
+.lg_img {
+    position: absolute;
+    top: -90px;
+    right: 661px;
+    z-index: 1;
+}
+.lg_lbtn {
+    position: absolute;
+    right: 685px;
+    top: -40px;
+    width: 150px;
+    height: 100px;
+    z-index: 3;
+    box-sizing: border-box;
+    padding-top: 12px;
+    text-align: center;
+}
+    .lg_lbtn:hover + .lg_img {
+        top: -75px;
+        animation: backindex2 0.2s 1 linear;
+    }
+
+    .lg_lbtn:hover {
+        top: -5px;
+        animation: backindex 0.2s 1 linear;
+    }
+#login-switch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0px;
+    width: 0px;
+    border: 25px solid;
+    border-color: rgba(255,255,255,0.3) rgba(255,255,255,0.3) transparent transparent;
+    z-index: 10;
+}
+    #login-state {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 50px;
+        height: 50px;
+        background: url(/images/Admin.png) no-repeat;
+        background-size: 75px;
+        background-position: -15px -10px;
+        float: right;
+    }
+    #login-state-box {
+        position: absolute;
+        right: -25px;
+        top: -25px;
+        height: 100px;
+        width: 100px;
+        text-align: right;
+        box-sizing: border-box;
+        padding-top: 3px;
+        padding-right: 3px;
+        display:none;
+    }
+#login-switch:hover {
+    border-width: 45px;
+    animation: state 0.2s 1 linear;
+}
+    #login-switch:hover #login-state-box {
+        right: -45px;
+        top: -45px;
+        display: block;
+    }
+    .md_th{
+        box-sizing:border-box;
+        padding:5px 0;
+    }
+.md_td {
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.anpager .cpb {
+    background: #1F3A87 none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin: 5px 4px 0 0;
+    padding: 4px 5px 0;
+}
+
+.anpager a {
+    background: #FFFFFF none repeat scroll 0 0;
+    border: 1px solid #CCCCCC;
+    color: #1F3A87;
+    margin: 5px 4px 0 0;
+    padding: 4px 5px 0;
+    text-decoration: none
+}
+
+.anpager a:hover {
+    background: #1F3A87 none repeat scroll 0 0;
+    border: 1px solid #1F3A87;
+    color: #FFFFFF;
+}
+.anpager input{
+    margin:0 2px;
+    outline:none;
+}
+#Notice div table tbody tr td a:hover{
+    padding-left:2px;
+}
+#content table tr:hover {
+    background: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.style1 a{
+    color:white;
+}
+
+.style1:hover {
+    border-radius: 5px;
+    background-color: white;
+}
+.style1:hover a{
+    color:black;
+}
+.partition {
+    width: 289px;
+    height: 180px;
+    margin: 5px;
+    padding: 15px;
+    background-color: rgba(116,51,0,0.07);
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid #b5b4b4;
+}
+    .partition:hover {
+        background-color: rgba(116,51,0,0.15);
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 299px;
+        height: 190px;
+        padding: 20px;
+    }
+    #bp td td{
+        height:191.6px;
+        position:relative;
+    }
+    .Sign input{
+        background-color:#d30000;
+    }
+    .Sign .signbtn:hover {
+        background-color: #ea4949;
+    }
+    
